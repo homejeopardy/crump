@@ -39,7 +39,7 @@ const categories = {
 let teams = {};
 let currentQuestion = null;
 let currentPoints = 0;
-let currentButton = null; // Stores the clicked button
+let currentButton = null;
 
 document.getElementById("add-team").addEventListener("click", addTeam);
 document.getElementById("start-game").addEventListener("click", startGame);
@@ -95,7 +95,7 @@ function generateBoard() {
         board.appendChild(header);
     });
 
-    for (let points of [100, 200, 300, 400, 500]) {
+    for (let points of [200, 400, 600, 800, 1000]) { // Corrected values
         Object.keys(categories).forEach(category => {
             let button = document.createElement("button");
             button.className = "question";
@@ -109,14 +109,18 @@ function generateBoard() {
 }
 
 function showQuestion(event) {
-    currentButton = event.target; // Store the clicked button
+    currentButton = event.target;
     const category = currentButton.getAttribute("data-category");
     const points = parseInt(currentButton.getAttribute("data-points"));
+
+    if (!categories[category] || !categories[category][points]) {
+        console.error(`Invalid category or points: ${category}, ${points}`);
+        return;
+    }
 
     currentQuestion = category;
     currentPoints = points;
 
-    // Play the Jeopardy theme song
     const jeopardyTheme = document.getElementById("jeopardy-theme");
     jeopardyTheme.play();
 
@@ -129,10 +133,9 @@ function showAnswer() {
     document.getElementById("answer-text").innerText = categories[currentQuestion][currentPoints][1];
     document.getElementById("answer-popup").style.display = "block";
 
-    // Stop the Jeopardy theme song
     const jeopardyTheme = document.getElementById("jeopardy-theme");
     jeopardyTheme.pause();
-    jeopardyTheme.currentTime = 0; // Reset audio to start
+    jeopardyTheme.currentTime = 0;
 }
 
 function updateScore(correct) {
@@ -140,13 +143,10 @@ function updateScore(correct) {
     teams[team] += correct ? currentPoints : -currentPoints;
     document.getElementById(`team-${team}`).innerText = `${team}: $${teams[team]}`;
 
-    // Close the answer pop-up after scoring
     document.getElementById("answer-popup").style.display = "none";
-
-    // Disable the button permanently after the question has been answered
     if (currentButton) {
         currentButton.disabled = true;
-        currentButton.style.backgroundColor = "#222"; // Change to a "used" style
+        currentButton.style.backgroundColor = "#222";
         currentButton.style.cursor = "not-allowed";
     }
 }
