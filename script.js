@@ -95,7 +95,7 @@ function generateBoard() {
         board.appendChild(header);
     });
 
-    for (let points of [200, 400, 600, 800, 1000]) { // Corrected values
+    for (let points of [200, 400, 600, 800, 1000]) { // Matches categories
         Object.keys(categories).forEach(category => {
             let button = document.createElement("button");
             button.className = "question";
