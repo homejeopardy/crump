@@ -1,38 +1,38 @@
 const categories = {
-    "Ethical Principles": {
-        100: ["Acting with honesty and truthfulness in all business dealings.", "Integrity"],
-        200: ["The duty to keep sensitive information private.", "Confidentiality"],
-        300: ["Acting in the best interest of clients, customers, or stakeholders.", "Fiduciary duty"],
-        400: ["A situation where personal interests could interfere with professional responsibilities.", "Conflict of interest"],
-        500: ["The principle that requires professionals to acknowledge and correct their mistakes.", "Accountability"]
+    "Presidents": {
+        200: ["This U.S. president issued the Emancipation Proclamation.", "Who is Abraham Lincoln?"],
+        400: ["This president faced the challenges of the Barbary Wars and the Lewis and Clark expedition.", "Who is Thomas Jefferson?"],
+        600: ["This president, the first one to serve two non-consecutive terms, is best known for leading the nation through the Panic of 1837 and the Indian Removal Act.", "Who is Martin Van Buren?"],
+        800: ["This president, a leading figure during the Progressive Era, broke up monopolies, championed conservation, and brokered peace in the Russo-Japanese War, earning the Nobel Peace Prize.", "Who is Theodore Roosevelt?"],
+        1000: ["This president delivered the famous 'Ich bin ein Berliner' speech in 1963.", "Who is John F. Kennedy?"]
     },
-    "Workplace Conduct": {
-        100: ["Treating colleagues with fairness, dignity, and respect.", "Professionalism"],
-        200: ["Unwelcome behavior that creates a hostile or uncomfortable work environment.", "Harassment"],
-        300: ["Reporting unethical behavior or policy violations.", "Whistleblowing"],
-        400: ["Avoiding favoritism and personal bias in decision-making.", "Impartiality"],
-        500: ["Using company resources for personal gain without authorization.", "Misappropriation"]
+    "Events of the 20th Century": {
+        200: ["In 1969, this astronaut's famous words upon stepping onto the lunar surface became a symbol of the U.S. space program’s success.", "Who is Neil Armstrong?"],
+        400: ["In 1919, the refusal of the U.S. Senate to ratify this treaty saw the creation of the League of Nations without U.S. participation.", "What is the Treaty of Versailles?"],
+        600: ["The invasion of this country by Nazi Germany in 1939 marked the start of World War II.", "What is Poland?"],
+        800: ["This event in 1989 marked the peaceful end of the Cold War.", "What is the fall of the Berlin Wall?"],
+        1000: ["This event in 1964 marked the escalation of U.S. involvement in the Vietnam War, when Congress passed this resolution giving the president broad military powers in Southeast Asia.", "What is the Gulf of Tonkin Resolution?"]
     },
-    "Legal & Compliance": {
-        100: ["Falsifying documents or financial records for personal or business gain.", "Fraud"],
-        200: ["Laws that protect employees from discrimination based on race, gender, or religion.", "Equal Employment Opportunity (EEO) laws"],
-        300: ["Offering or accepting something of value to influence a business decision.", "Bribery"],
-        400: ["The requirement to disclose any conflicts of interest in professional dealings.", "Transparency"],
-        500: ["A set of company policies that outline acceptable workplace behavior and expectations.", "Code of Conduct"]
+    "The Foreign Service": {
+        200: ["This diplomatic title refers to the highest-ranking official representing the U.S. in a foreign country.", "What is an Ambassador?"],
+        400: ["Established in the 1960s, this organization places volunteers in developing countries to provide assistance in health, education, and community development.", "What is the Peace Corps?"],
+        600: ["This U.S. program, established in 1946, provides financial assistance to foreign countries to promote economic development, democracy, and political stability.", "What is the Marshall Plan?"],
+        800: ["This treaty, signed in 1947, was a major effort by the U.S. to strengthen its foreign policy and secure alliances in the post-World War II era.", "What is the North Atlantic Treaty Organization (NATO) Agreement?"],
+        1000: ["This U.S. diplomat, known for his involvement in the Yalta Conference and later as Secretary of State, was instrumental in shaping post-war international policy and the United Nations.", "Who is James F. Byrnes?"]
     },
-    "Professional Responsibilities": {
-        100: ["The expectation that professionals will continue to develop their skills and knowledge.", "Continuous learning"],
-        200: ["The obligation to report misconduct, even if it may have personal consequences.", "Duty to report"],
-        300: ["Avoiding giving or receiving these to prevent conflicts of interest.", "Gifts and favors"],
-        400: ["Following lawful instructions from supervisors unless they violate ethical standards.", "Ethical obedience"],
-        500: ["The responsibility of a leader to set a strong ethical example.", "Ethical leadership"]
+    "Sights of Washington": {
+        200: ["This 555-foot structure was completed in 1884 and is a prominent feature of the National Mall.", "What is the Washington Monument?"],
+        400: ["This structure, designed by architect John Russell Pope, houses the nation’s most important documents, including the Declaration of Independence and the U.S. Constitution.", "What is the National Archives Building?"],
+        600: ["Located on the National Mall, this memorial features a reflective black granite wall with over 58,000 names etched into it.", "What is the Vietnam Veterans Memorial?"],
+        800: ["This museum, which includes exhibits on American history, culture, and science, is housed within the Smithsonian Institution.", "What is the National Museum of American History?"],
+        1000: ["This neoclassical building, completed in 1908, houses the U.S. Navy’s offices and is one of the oldest government buildings in Washington, D.C.", "What is the Old Executive Office Building?"]
     },
-    "Digital & Online Conduct": {
-        100: ["Using company technology for personal, illegal, or inappropriate purposes.", "Misuse of company resources"],
-        200: ["The duty to protect sensitive client or company data.", "Data privacy"],
-        300: ["Unauthorized sharing or leaking of confidential company information.", "Information breach"],
-        400: ["Posting false or damaging statements about a company or colleague online.", "Defamation"],
-        500: ["The principle that encourages professionals to think carefully before posting online.", "Responsible online conduct"]
+    "U.S. Landmarks": {
+        200: ["This 630-foot monument, completed in 1965, was designed to symbolize westward expansion.", "What is the Gateway Arch?"],
+        400: ["This park in Marin County, California, is home to some of the tallest trees on Earth, and its name honors a Scottish naturalist.", "What is Muir Woods National Monument?"],
+        600: ["Known for its geothermal features and diverse wildlife, this was the first U.S. national park, designated in 1872.", "What is Yellowstone National Park?"],
+        800: ["Landscape Arch, located in Utah, is the largest arch in the world and is part of this park.", "What is Arches National Park?"],
+        1000: ["Mount Rushmore, in South Dakota, features the faces of these four U.S. presidents.", "Who are Washington, Lincoln, Jefferson, and Roosevelt?"]
     }
 };
 
