@@ -113,17 +113,27 @@ function showQuestion(event) {
     const category = currentButton.getAttribute("data-category");
     const points = parseInt(currentButton.getAttribute("data-points"));
 
-    if (!categories[category] || !categories[category][points]) {
-        console.error(`Invalid category or points: ${category}, ${points}`);
+    // Debugging logs
+    console.log(`Category: ${category}, Points: ${points}`);
+    console.log("Available categories:", Object.keys(categories));
+
+    if (!categories[category]) {
+        console.error(`Error: Category "${category}" not found.`);
+        return;
+    }
+    if (!categories[category][points]) {
+        console.error(`Error: Points "${points}" not found in category "${category}".`);
         return;
     }
 
     currentQuestion = category;
     currentPoints = points;
 
+    // Play Jeopardy theme
     const jeopardyTheme = document.getElementById("jeopardy-theme");
     jeopardyTheme.play();
 
+    // Display question
     document.getElementById("question-text").innerText = categories[category][points][0];
     document.getElementById("popup").style.display = "block";
 }
